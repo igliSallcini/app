@@ -29,5 +29,6 @@ urlpatterns = [
     path('orders_to_suppliers/', include('orders_to_suppliers.urls')),
     path('register/', views.register, name="register"),
     path('macc/', include('macc.urls')),
-    path('accounts/', include('django.contrib.auth.urls'))
+    path('logout/', views.logout_user, name="logout"),
+    path('accounts/', include('django.contrib.auth.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
